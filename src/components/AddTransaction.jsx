@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import Button from "@mui/material/Button/";
+import AddIcon from "@mui/icons-material/Add";
 
 export const AddTransaction = () => {
   const [text, setText] = useState("");
@@ -27,6 +29,7 @@ export const AddTransaction = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="Enter text..."
+            required
           />
         </div>
         <div className="form-control">
@@ -39,9 +42,25 @@ export const AddTransaction = () => {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             placeholder="Enter amount..."
+            required
           />
         </div>
-        <button className="btn">Add transaction</button>
+        <Button
+          type="submit"
+          variant="contained"
+          sx={{
+            mt: 2,
+            mb: 3,
+            mx: 0,
+            px: 1,
+            py: 1,
+          }}
+          disableElevation
+          fullWidth
+          endIcon={<AddIcon />}
+        >
+          Add transaction
+        </Button>
       </form>
     </div>
   );
