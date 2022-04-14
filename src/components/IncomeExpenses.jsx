@@ -18,20 +18,11 @@ export const IncomeExpenses = () => {
 
   return (
     <div className="inc-exp-container">
-      {/* <div>
-        <Card></Card>
-        <h4>Income</h4>
-        <p>{income}</p>
-      </div>
-      <div>
-        <h4>Expense</h4>
-        <p>{Math.abs(expense)}</p>
-      </div> */}
       <Stack
         direction="row"
         justifyContent="space-evenly"
         alignItems="center"
-        spacing={2}
+        spacing={3}
         divider={
           <Divider
             orientation="vertical"
@@ -41,11 +32,11 @@ export const IncomeExpenses = () => {
         }
       >
         <Paper
-          elevation={12}
+          elevation={14}
           sx={{
             color: "#e6e3dd",
             bgcolor: "#1a1a1a",
-            width: "75%",
+            width: "70%",
             height: "100%",
             borderRadius: "15%",
             pb: 2,
@@ -60,11 +51,11 @@ export const IncomeExpenses = () => {
           <p className="plus">{income}</p>
         </Paper>
         <Paper
-          elevation={12}
+          elevation={14}
           sx={{
             color: "#e6e3dd",
             bgcolor: "#1a1a1a",
-            width: "75%",
+            width: "70%",
             height: "100%",
             borderRadius: "15%",
             pb: 2,
@@ -75,7 +66,7 @@ export const IncomeExpenses = () => {
             justifyContent: "center",
           }}
         >
-          Expenses
+          <h4>Expenses</h4>
           <p className="minus">{Math.abs(expense)}</p>
         </Paper>
       </Stack>

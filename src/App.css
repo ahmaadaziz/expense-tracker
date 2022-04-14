@@ -26,37 +26,14 @@ h1 {
   margin: 0;
 }
 
-h3 {
-  border-bottom: 1px solid #2d3233;
-  padding-bottom: 10px;
-  margin: 40px 0 10px;
-}
-
 h4 {
   margin: 0;
   text-transform: uppercase;
 }
 
 .inc-exp-container {
-  padding: 20px;
-  /* display: flex;
-  justify-content: space-between; */
+  padding: 10px;
   margin: 20px 0;
-}
-
-/* .inc-exp-container > div {
-  flex: 1;
-  text-align: center;
-} */
-
-/* .inc-exp-container > div:first-of-type {
-  border-right: 1px solid #2d3233;
-} */
-
-.money {
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin: 5px 0;
 }
 
 p.plus {
@@ -82,6 +59,7 @@ p.minus {
   position: relative;
   padding: 10px;
   margin: 10px 5px;
+  opacity: 0.7;
 }
 
 .list li.plus {
@@ -108,8 +86,9 @@ p.minus {
   transition: opacity 0.3s ease;
 }
 
-.list li:hover .delete-btn {
+.list li:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 @media (max-width: 380px) {
