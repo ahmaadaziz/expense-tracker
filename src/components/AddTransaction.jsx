@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import Button from "@mui/material/Button/";
+import TextField from "@mui/material/TextField";
 import AddIcon from "@mui/icons-material/Add";
 
 export const AddTransaction = () => {
@@ -23,27 +24,35 @@ export const AddTransaction = () => {
     <div>
       <form action="" onSubmit={handleSubmit}>
         <div className="form-control">
-          <label htmlFor="text">Text</label>
-          <input
-            type="text"
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            label="Text"
             value={text}
+            margin="normal"
             onChange={(e) => setText(e.target.value)}
-            placeholder="Enter text..."
             required
-          />
+            fullWidth
+            InputLabelProps={{ style: { color: "#e6e3dd" } }}
+            InputProps={{ style: { color: "#e6e3dd" } }}
+          ></TextField>
         </div>
         <div className="form-control">
-          <label htmlFor="amount">
-            Amount <br />
-            (negative - expense, positive - income)
-          </label>
-          <input
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
             type="number"
+            label="Amount"
+            margin="normal"
+            helperText="negative - expense, positive - income"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            placeholder="Enter amount..."
             required
-          />
+            fullWidth
+            InputLabelProps={{ style: { color: "#e6e3dd" } }}
+            InputProps={{ style: { color: "#e6e3dd" } }}
+            FormHelperTextProps={{ style: { color: "#e6e3dd" } }}
+          ></TextField>
         </div>
         <Button
           type="submit"

@@ -38,22 +38,20 @@ h4 {
 }
 
 .inc-exp-container {
-  background-color: #17191a;
-  box-shadow: var(--box-shadow);
   padding: 20px;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   margin: 20px 0;
 }
 
-.inc-exp-container > div {
+/* .inc-exp-container > div {
   flex: 1;
   text-align: center;
-}
+} */
 
-.inc-exp-container > div:first-of-type {
+/* .inc-exp-container > div:first-of-type {
   border-right: 1px solid #2d3233;
-}
+} */
 
 .money {
   font-size: 20px;
@@ -61,28 +59,12 @@ h4 {
   margin: 5px 0;
 }
 
-.money.plus {
+p.plus {
   color: #2ecc71;
 }
 
-.money.minus {
+p.minus {
   color: #c0392b;
-}
-
-label {
-  display: inline-block;
-  margin: 10px 0;
-}
-
-input[type="text"],
-input[type="number"] {
-  background-color: #17191a;
-  border: 1px solid #2f3335;
-  border-radius: 2px;
-  display: block;
-  font-size: 16px;
-  padding: 10px;
-  width: 100%;
 }
 
 .list {
@@ -99,7 +81,7 @@ input[type="number"] {
   justify-content: space-between;
   position: relative;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px 5px;
 }
 
 .list li.plus {
@@ -130,7 +112,7 @@ input[type="number"] {
   opacity: 1;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 380px) {
   .container {
     width: 300px;
   }
